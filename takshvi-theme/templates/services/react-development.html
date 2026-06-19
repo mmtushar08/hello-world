@@ -1,0 +1,52 @@
+{% extends "../layouts/base.html" %}
+
+{% block body %}
+{% module "react_service_page" path="@theme/modules/service-page.module",
+  platform_badge="React & Next.js Development",
+  hero_headline="Production-grade<br>React. Not a prototype.",
+  hero_subtext="We build Next.js applications, SPAs, and React-powered frontends for B2B companies that need senior engineering depth — TypeScript-first, Server Components-aware, and performant enough to prove it with numbers.",
+  hero_cta_label="Start your React project",
+  hero_cta_url={ "url": { "href": "/contact" } },
+
+  pain_heading="Why teams come to us",
+  pain_points=[
+    { "text": "Your product team is at capacity and marketing or ops needs a Next.js site or internal tool built without pulling engineers off core product." },
+    { "text": "You inherited a Create React App codebase that's slow, untyped, and painful to extend — you need a migration to Next.js App Router." },
+    { "text": "Your current agency or freelancer delivered React code that nobody on your team can maintain because it's poorly structured and undocumented." },
+    { "text": "You need a customer-facing portal, dashboard, or self-serve tool that integrates with your API but your team doesn't have frontend depth." },
+    { "text": "Lighthouse scores are in the 40s. Core Web Vitals are failing. Users are churning from a slow frontend." }
+  ],
+
+  deliverables_heading="What we deliver",
+  deliverables=[
+    { "title": "Next.js Application Development", "description": "Full-stack Next.js builds on the App Router. Server Components, Streaming SSR, Partial Prerendering, and Edge Runtime where it makes sense — not as a trend, but because they move your metrics." },
+    { "title": "TypeScript-First Codebase", "description": "Every project is TypeScript from day one. Strict mode enabled. Full type coverage. Your engineers can pick up where we leave off without archaeology." },
+    { "title": "Headless CMS Integrations", "description": "Next.js + Contentful, Sanity, Payload, Notion, or your existing headless CMS. Typed API client, ISR caching strategy, and content preview mode." },
+    { "title": "React SPA Development", "description": "Single-page applications for dashboards, portals, and internal tools. React Query, Zustand or Redux Toolkit, and a component library on Radix or shadcn/ui." },
+    { "title": "CRA to Next.js Migration", "description": "Structured migration from Create React App or older Next.js (Pages Router) to the App Router. Incremental, testable, with no big-bang cutover." },
+    { "title": "Performance Engineering", "description": "LCP, INP, and CLS optimisation. Bundle analysis, code splitting, image pipeline, font optimisation. We deliver Lighthouse 95+ and prove it before handoff." }
+  ],
+
+  tech_items="Next.js 15, React 19, TypeScript, Tailwind CSS, shadcn/ui, Radix UI, React Query, Zustand, Prisma, tRPC, Vercel, Cloudflare Workers, Playwright, Vitest",
+
+  process_heading="How a React project works",
+  process_steps=[
+    { "title": "Technical Discovery", "description": "We review existing code (if any), API contracts, auth requirements, and performance baselines. We produce a technical specification before scoping the build." },
+    { "title": "Architecture Design", "description": "Component hierarchy, data-fetching strategy (RSC vs. client), caching model, state management, and routing. Agreed in writing before development starts." },
+    { "title": "Agile Build Sprints", "description": "2-week sprints. Demo at the end of every sprint. Feature branches, PR reviews, TypeScript strict throughout. Staging on Vercel with preview deployments per PR." },
+    { "title": "QA, Handoff & Documentation", "description": "E2E tests (Playwright), unit tests (Vitest), Lighthouse audit, bundle analysis report. Full technical handoff doc and 30-day post-launch support." }
+  ],
+
+  faq_heading="Common questions",
+  faqs=[
+    { "question": "Do you use the Next.js App Router or Pages Router?", "answer": "<p>All new projects use the App Router (Next.js 13+). It's the direction Vercel and the React team are building toward, and Server Components are now stable and production-ready. We do support Pages Router maintenance for existing projects.</p>" },
+    { "question": "What's the minimum engagement size for React development?", "answer": "<p>Our minimum project engagement is $25,000. This ensures we can do proper discovery, architecture, and deliver production-quality work with documentation. Smaller scopes are often better served by a retainer model for an existing project.</p>" },
+    { "question": "How do you handle state management?", "answer": "<p>We default to React Server Components + React Query for server state, and Zustand for UI state. We avoid Redux unless the codebase already uses it and migration isn't in scope. We don't use Context for high-frequency state updates.</p>" },
+    { "question": "Can you build both the frontend and backend API?", "answer": "<p>Yes. We build full-stack Next.js applications with API routes, server actions, and database layers (Prisma + PostgreSQL or Supabase). We can also build standalone Node.js APIs that serve your React frontend.</p>" },
+    { "question": "What does a Next.js project cost?", "answer": "<p>A focused Next.js marketing site or landing page system starts at $25,000. A full SPA or dashboard application with auth, APIs, and database starts at $50,000. Enterprise-scale applications with multiple integrations, role-based access, and complex data pipelines start at $100,000+.</p>" }
+  ],
+
+  cta_headline="Need React built by engineers<br>who actually care?",
+  cta_subtext="Share your technical requirements. We'll review them and tell you exactly how we'd structure the build."
+%}
+{% endblock %}

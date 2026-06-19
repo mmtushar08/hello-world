@@ -1,0 +1,53 @@
+{% extends "../layouts/base.html" %}
+
+{% block body %}
+{% module "hubspot_service_page" path="@theme/modules/service-page.module",
+  platform_badge="HubSpot CMS Development",
+  hero_headline="The HubSpot CMS<br>agency that codes<br>what others can't.",
+  hero_subtext="We build bespoke HubSpot CMS themes, custom HubL modules, and HubDB-powered sites that your marketing team can actually manage — and your engineering team won't need to babysit.",
+  hero_cta_label="Start your HubSpot project",
+  hero_cta_url={ "url": { "href": "/contact" } },
+
+  pain_heading="Sound familiar?",
+  pain_points=[
+    { "text": "Your HubSpot CMS site was built by a generalist agency and it's slow, rigid, and hard to edit without breaking things." },
+    { "text": "Your marketing team is stuck waiting on developers for every page update or module change." },
+    { "text": "You migrated from WordPress or Drupal but the new HubSpot site doesn't reflect your brand quality." },
+    { "text": "You have HubSpot CRM set up properly but the website isn't wired to surface personalised content or track intent." },
+    { "text": "Your current HubSpot theme is a $200 marketplace template with every company's fingerprints on it." }
+  ],
+
+  deliverables_heading="What we deliver",
+  deliverables=[
+    { "title": "Custom HubSpot Themes", "description": "Fully bespoke themes built in HubL with clean, maintainable code. No marketplace templates. Every pixel intentional." },
+    { "title": "Custom HubL Modules", "description": "Drag-and-drop modules your content team can control without engineering. Flexible field architecture, locked-down output." },
+    { "title": "HubDB-Powered Pages", "description": "Dynamic content at scale — team pages, resource libraries, location directories, partner indexes — powered by HubDB rows, not individual pages." },
+    { "title": "CRM-Integrated Personalisation", "description": "Smart content blocks that serve different messaging to known contacts, lifecycle stages, or industry segments — all without engineering lift post-handoff." },
+    { "title": "CMS Migration (to HubSpot)", "description": "SEO-safe migrations from WordPress, Drupal, Sitecore, or Webflow. Full redirect mapping, 301 architecture, content parity audit." },
+    { "title": "Performance Optimisation", "description": "Sub-1s LCP on HubSpot CMS. Lazy-loaded images, deferred scripts, CDN-cached assets. We audit and fix existing slow sites too." }
+  ],
+
+  tech_items="HubL, HubDB, HubSpot CMS API, HubSpot CRM, React (Content Hub), JavaScript, GSAP, HubSpot CLI, Serverless Functions, Custom Objects",
+
+  process_heading="How a HubSpot CMS project works",
+  process_steps=[
+    { "title": "Audit & Discovery", "description": "We audit your existing HubSpot portal, content architecture, and integration setup before scoping a single line of work." },
+    { "title": "Information Architecture", "description": "We map your module library, template structure, HubDB schema, and smart content rules before design begins." },
+    { "title": "Build & QA", "description": "Theme and module development in 2-week sprints. Live staging environment on HubSpot sandbox. Full QA across devices and browsers." },
+    { "title": "Launch & Handoff", "description": "Validated go-live with redirect checks, Core Web Vitals audit, editor training session, and full technical documentation." }
+  ],
+
+  faq_heading="Common questions",
+  faqs=[
+    { "question": "Are you an official HubSpot partner?", "answer": "<p>Yes. Takshvi is a certified HubSpot Solutions Partner. We work with HubSpot's partner team and have direct access to technical support, beta features, and the partner directory.</p>" },
+    { "question": "How long does a HubSpot CMS build take?", "answer": "<p>A full HubSpot CMS website build (custom theme + 15–30 modules + migration) typically takes 8–14 weeks depending on scope. Discovery and architecture take 2–3 weeks. Active build runs in 4–8-week sprints.</p>" },
+    { "question": "Can you migrate our existing website to HubSpot CMS?", "answer": "<p>Yes. We handle full SEO-safe migrations from WordPress, Drupal, Webflow, Sitecore, and other CMS platforms. This includes full redirect mapping, content parity audit, and post-launch monitoring.</p>" },
+    { "question": "What's the difference between HubSpot CMS and HubSpot Content Hub?", "answer": "<p>HubSpot rebranded CMS Hub to Content Hub in 2023. Content Hub includes all CMS functionality plus AI content tools, brand voice settings, and content remix capabilities. We build on Content Hub (the current product name) and support all tiers.</p>" },
+    { "question": "Do you build the marketing strategy too, or just the site?", "answer": "<p>We are a technical development agency — we build the platform, not the strategy. We work alongside your marketing team or marketing agency. We do advise on technical SEO architecture, content structure, and CRM integration strategy as part of every build.</p>" },
+    { "question": "What does a HubSpot CMS project cost?", "answer": "<p>A custom HubSpot CMS website starts at $30,000 for a mid-size B2B site. Enterprise builds with complex personalisation, HubDB architecture, and migration work run $60,000–$120,000. Ongoing retainers start at $4,500/month.</p>" }
+  ],
+
+  cta_headline="Ready to build a HubSpot<br>CMS site that actually converts?",
+  cta_subtext="Tell us about your project. We'll audit your current setup and share exactly how we'd approach it — free."
+%}
+{% endblock %}

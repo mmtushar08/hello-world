@@ -1,0 +1,133 @@
+{# ============================================================
+   Service Page Module — Full Layout
+   Sections: Hero → Pain → Deliverables → Tech Stack → Process → FAQ → CTA
+   ============================================================ #}
+
+{# ---- HERO ---- #}
+<section class="sp-hero">
+  <div class="container">
+    <div class="sp-hero__inner">
+      <div class="sp-hero__content">
+        <div class="badge reveal">
+          <span class="badge__dot"></span>
+          {{ module.platform_badge }}
+        </div>
+        <h1 class="sp-hero__headline reveal">{{ module.hero_headline }}</h1>
+        <p class="sp-hero__subtext reveal">{{ module.hero_subtext }}</p>
+        <div class="sp-hero__actions reveal">
+          <a href="{{ module.hero_cta_url.url.href }}" class="btn btn--primary btn--lg"
+             {% if module.hero_cta_url.open_in_new_tab %}target="_blank" rel="noopener"{% endif %}>
+            {{ module.hero_cta_label }} <span class="btn__arrow">→</span>
+          </a>
+          <a href="/case-studies" class="btn btn--ghost btn--lg">See our work</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ---- PAIN ---- #}
+<section class="sp-pain">
+  <div class="container">
+    <div class="sp-pain__inner">
+      <div class="sp-pain__header reveal-left">
+        <p class="section-label">The problem</p>
+        <h2 class="sp-pain__heading">{{ module.pain_heading }}</h2>
+      </div>
+      <ul class="sp-pain__list stagger-parent">
+        {% for p in module.pain_points %}
+        <li class="sp-pain__item stagger-child">
+          <span class="sp-pain__bullet" aria-hidden="true">—</span>
+          <span>{{ p.text }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+{# ---- DELIVERABLES ---- #}
+<section class="sp-deliverables">
+  <div class="container">
+    <div class="sp-deliverables__header reveal">
+      <p class="section-label">What you get</p>
+      <h2 class="sp-deliverables__heading">{{ module.deliverables_heading }}</h2>
+    </div>
+    <div class="sp-deliverables__grid stagger-parent">
+      {% for d in module.deliverables %}
+      <div class="sp-deliverable stagger-child">
+        <div class="sp-deliverable__num" aria-hidden="true">{{ loop.index | stringformat:"02d" }}</div>
+        <h3 class="sp-deliverable__title">{{ d.title }}</h3>
+        <p class="sp-deliverable__description">{{ d.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# ---- TECH STACK ---- #}
+{% if module.tech_items %}
+<section class="sp-tech">
+  <div class="container">
+    <div class="sp-tech__inner reveal">
+      <p class="sp-tech__heading">{{ module.tech_heading }}</p>
+      <div class="sp-tech__list">
+        {% set techs = module.tech_items.split(',') %}
+        {% for tech in techs %}
+        <span class="sp-tech__item">{{ tech | trim }}</span>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# ---- PROCESS ---- #}
+<section class="sp-process">
+  <div class="container">
+    <div class="sp-process__header reveal">
+      <p class="section-label">Our approach</p>
+      <h2 class="sp-process__heading">{{ module.process_heading }}</h2>
+    </div>
+    <div class="sp-process__steps stagger-parent">
+      {% for step in module.process_steps %}
+      <div class="sp-process-step stagger-child">
+        <div class="sp-process-step__num">{{ loop.index }}</div>
+        <h3 class="sp-process-step__title">{{ step.title }}</h3>
+        <p class="sp-process-step__desc">{{ step.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# ---- FAQ ---- #}
+<section class="sp-faq">
+  <div class="container">
+    <div class="sp-faq__inner">
+      <div class="sp-faq__header reveal-left">
+        <p class="section-label">FAQ</p>
+        <h2 class="sp-faq__heading">{{ module.faq_heading }}</h2>
+      </div>
+      <div class="sp-faq__list reveal-right">
+        {% for faq in module.faqs %}
+        <details class="sp-faq__item">
+          <summary class="sp-faq__question">
+            {{ faq.question }}
+            <span class="sp-faq__icon" aria-hidden="true">+</span>
+          </summary>
+          <div class="sp-faq__answer">{{ faq.answer }}</div>
+        </details>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ---- CTA ---- #}
+{% module "service_cta" path="@theme/modules/cta.module",
+  headline=module.cta_headline,
+  subtext=module.cta_subtext,
+  cta_label="Start a conversation",
+  cta_url={ "url": { "href": "/contact" } }
+%}
