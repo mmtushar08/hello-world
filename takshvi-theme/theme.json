@@ -1,0 +1,14 @@
+{
+  "label": "Takshvi Agency Theme",
+  "preview_path": "/templates/home.html",
+  "screenshot_path": "",
+  "enable_domain_stylesheets": false,
+  "author": {
+    "name": "Takshvi Agency",
+    "email": "hello@takshvi.agency",
+    "url": "https://takshvi.agency"
+  },
+  "version": "1.0.0",
+  "description": "A clean, minimal, high-end theme for Takshvi Agency — built for HubSpot CMS.",
+  "license": "MIT"
+}

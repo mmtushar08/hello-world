@@ -1,0 +1,50 @@
+[
+  {
+    "id": "headline",
+    "name": "headline",
+    "label": "Headline",
+    "type": "richtext",
+    "default": "Ready to build<br>something exceptional?"
+  },
+  {
+    "id": "subtext",
+    "name": "subtext",
+    "label": "Subtext",
+    "type": "textarea",
+    "default": "Tell us about your project. We'll tell you exactly how we'd approach it."
+  },
+  {
+    "id": "cta_label",
+    "name": "cta_label",
+    "label": "CTA Label",
+    "type": "text",
+    "default": "Start a conversation"
+  },
+  {
+    "id": "cta_url",
+    "name": "cta_url",
+    "label": "CTA URL",
+    "type": "link",
+    "default": {
+      "url": { "href": "/contact", "type": "EXTERNAL" },
+      "open_in_new_tab": false
+    }
+  },
+  {
+    "id": "secondary_label",
+    "name": "secondary_label",
+    "label": "Secondary Link Label",
+    "type": "text",
+    "default": "Or email us directly"
+  },
+  {
+    "id": "secondary_url",
+    "name": "secondary_url",
+    "label": "Secondary Link URL",
+    "type": "link",
+    "default": {
+      "url": { "href": "mailto:hello@takshvi.agency", "type": "EMAIL" },
+      "open_in_new_tab": false
+    }
+  }
+]

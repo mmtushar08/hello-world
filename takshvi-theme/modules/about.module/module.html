@@ -1,0 +1,71 @@
+<section class="about" aria-label="About Us">
+  <div class="container">
+    <div class="about__inner">
+
+      {# Left: headline + stats #}
+      <div class="about__left reveal-left">
+        <p class="section-label">{{ module.section_label }}</p>
+        <h2 class="about__headline">{{ module.headline }}</h2>
+
+        <div class="about__stats">
+          {% for stat in module.stats %}
+          <div class="about-stat">
+            <div class="about-stat__value">{{ stat.value }}</div>
+            <div class="about-stat__label">{{ stat.label }}</div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      {# Right: body text + CTA #}
+      <div class="about__right reveal-right">
+        <div class="about__body">
+          {{ module.body }}
+        </div>
+
+        <div class="about__values">
+          <div class="about-value">
+            <div class="about-value__icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M13 4L6.5 11 3 7.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <span>Senior engineers, not juniors</span>
+          </div>
+          <div class="about-value">
+            <div class="about-value__icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M13 4L6.5 11 3 7.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <span>Fixed timelines, no scope creep</span>
+          </div>
+          <div class="about-value">
+            <div class="about-value__icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M13 4L6.5 11 3 7.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <span>Transparent async communication</span>
+          </div>
+          <div class="about-value">
+            <div class="about-value__icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M13 4L6.5 11 3 7.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <span>Code reviews on every PR</span>
+          </div>
+        </div>
+
+        <a href="{{ module.cta_url.url.href }}"
+           class="btn btn--ghost"
+           {% if module.cta_url.open_in_new_tab %}target="_blank" rel="noopener"{% endif %}>
+          {{ module.cta_label }}
+          <span class="btn__arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>

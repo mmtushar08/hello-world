@@ -1,0 +1,72 @@
+[
+  {
+    "id": "section_label",
+    "name": "section_label",
+    "label": "Section Label",
+    "type": "text",
+    "default": "How we work"
+  },
+  {
+    "id": "headline",
+    "name": "headline",
+    "label": "Headline",
+    "type": "richtext",
+    "default": "No surprises.<br>Just delivery."
+  },
+  {
+    "id": "subtext",
+    "name": "subtext",
+    "label": "Subtext",
+    "type": "textarea",
+    "default": "Our process is simple enough to explain in four steps and rigorous enough to trust with complex builds."
+  },
+  {
+    "id": "steps",
+    "name": "steps",
+    "label": "Process Steps",
+    "type": "group",
+    "occurrence": { "min": 2, "max": 6, "default": 4 },
+    "children": [
+      {
+        "id": "title",
+        "name": "title",
+        "label": "Step Title",
+        "type": "text"
+      },
+      {
+        "id": "description",
+        "name": "description",
+        "label": "Step Description",
+        "type": "textarea"
+      },
+      {
+        "id": "duration",
+        "name": "duration",
+        "label": "Typical Duration",
+        "type": "text"
+      }
+    ],
+    "default": [
+      {
+        "title": "Discovery",
+        "description": "We audit your current stack, review your goals, and map every technical requirement before writing a single line of code.",
+        "duration": "1–2 weeks"
+      },
+      {
+        "title": "Architecture",
+        "description": "We design the system — modules, data structure, integrations, and component hierarchy — and validate it with you before building.",
+        "duration": "1 week"
+      },
+      {
+        "title": "Build",
+        "description": "Iterative development in 2-week sprints with live previews, code reviews, and constant async communication.",
+        "duration": "4–8 weeks"
+      },
+      {
+        "title": "Launch & Handoff",
+        "description": "QA across devices, performance auditing, go-live support, and documentation so your team can own it confidently.",
+        "duration": "1 week"
+      }
+    ]
+  }
+]

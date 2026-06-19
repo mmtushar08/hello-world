@@ -1,0 +1,83 @@
+[
+  {
+    "id": "section_label",
+    "name": "section_label",
+    "label": "Section Label",
+    "type": "text",
+    "default": "What we build"
+  },
+  {
+    "id": "headline",
+    "name": "headline",
+    "label": "Headline",
+    "type": "richtext",
+    "default": "Every platform,<br>mastered."
+  },
+  {
+    "id": "subtext",
+    "name": "subtext",
+    "label": "Subtext",
+    "type": "textarea",
+    "default": "We don't dabble. We go deep on the platforms that power modern B2B companies."
+  },
+  {
+    "id": "services",
+    "name": "services",
+    "label": "Services",
+    "type": "group",
+    "occurrence": { "min": 1, "max": 8, "default": 5 },
+    "children": [
+      {
+        "id": "icon",
+        "name": "icon",
+        "label": "Icon (SVG code)",
+        "type": "html"
+      },
+      {
+        "id": "name",
+        "name": "name",
+        "label": "Service Name",
+        "type": "text"
+      },
+      {
+        "id": "description",
+        "name": "description",
+        "label": "Description",
+        "type": "textarea"
+      },
+      {
+        "id": "tags",
+        "name": "tags",
+        "label": "Tags (comma-separated)",
+        "type": "text"
+      }
+    ],
+    "default": [
+      {
+        "name": "HubSpot CMS Development",
+        "description": "Custom themes, modules, and HubDB-powered sites. Performance-first, fully integrated with HubSpot's CRM.",
+        "tags": "HubL, CRM, Integrations"
+      },
+      {
+        "name": "WordPress Development",
+        "description": "Headless and traditional WordPress builds. Custom block editors, plugin development, and WooCommerce.",
+        "tags": "Gutenberg, REST API, ACF"
+      },
+      {
+        "name": "Webflow Development",
+        "description": "Pixel-perfect Webflow builds with CMS collections, custom interactions, and clean export-ready code.",
+        "tags": "CMS, Interactions, Code Export"
+      },
+      {
+        "name": "React Development",
+        "description": "Component-driven SPAs and hybrid applications. Next.js, TypeScript, and API-first architectures.",
+        "tags": "Next.js, TypeScript, API"
+      },
+      {
+        "name": "Enterprise Applications",
+        "description": "Scalable custom web applications, portals, and internal tools built for B2B complexity.",
+        "tags": "Node.js, PostgreSQL, Docker"
+      }
+    ]
+  }
+]
