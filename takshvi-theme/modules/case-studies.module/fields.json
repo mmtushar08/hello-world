@@ -1,0 +1,137 @@
+[
+  {
+    "id": "section_label",
+    "name": "section_label",
+    "label": "Section Label",
+    "type": "text",
+    "default": "Selected work"
+  },
+  {
+    "id": "headline",
+    "name": "headline",
+    "label": "Headline",
+    "type": "richtext",
+    "default": "Results that<br>speak clearly."
+  },
+  {
+    "id": "view_all_label",
+    "name": "view_all_label",
+    "label": "View All Label",
+    "type": "text",
+    "default": "View all case studies"
+  },
+  {
+    "id": "view_all_url",
+    "name": "view_all_url",
+    "label": "View All URL",
+    "type": "link",
+    "default": {
+      "url": { "href": "/case-studies", "type": "EXTERNAL" },
+      "open_in_new_tab": false
+    }
+  },
+  {
+    "id": "case_studies",
+    "name": "case_studies",
+    "label": "Case Studies",
+    "type": "group",
+    "occurrence": { "min": 1, "max": 6, "default": 3 },
+    "children": [
+      {
+        "id": "category",
+        "name": "category",
+        "label": "Category",
+        "type": "text"
+      },
+      {
+        "id": "client",
+        "name": "client",
+        "label": "Client",
+        "type": "text"
+      },
+      {
+        "id": "title",
+        "name": "title",
+        "label": "Project Title",
+        "type": "text"
+      },
+      {
+        "id": "description",
+        "name": "description",
+        "label": "Brief Description",
+        "type": "textarea"
+      },
+      {
+        "id": "metric_value",
+        "name": "metric_value",
+        "label": "Key Metric Value",
+        "type": "text"
+      },
+      {
+        "id": "metric_label",
+        "name": "metric_label",
+        "label": "Key Metric Label",
+        "type": "text"
+      },
+      {
+        "id": "image",
+        "name": "image",
+        "label": "Project Image",
+        "type": "image"
+      },
+      {
+        "id": "gradient",
+        "name": "gradient",
+        "label": "Gradient Color (fallback)",
+        "type": "choice",
+        "choices": [
+          ["blue", "Blue"],
+          ["violet", "Violet"],
+          ["emerald", "Emerald"],
+          ["amber", "Amber"],
+          ["slate", "Slate"]
+        ],
+        "default": "blue"
+      },
+      {
+        "id": "url",
+        "name": "url",
+        "label": "Case Study URL",
+        "type": "link",
+        "default": {
+          "url": { "href": "#", "type": "EXTERNAL" },
+          "open_in_new_tab": false
+        }
+      }
+    ],
+    "default": [
+      {
+        "category": "HubSpot CMS",
+        "client": "Meridian Software",
+        "title": "Redesigned HubSpot CMS at enterprise scale",
+        "description": "Custom theme architecture with 40+ reusable modules, HubDB-powered blog, and deep CRM integration.",
+        "metric_value": "+240%",
+        "metric_label": "MQL growth in 90 days",
+        "gradient": "blue"
+      },
+      {
+        "category": "React + Node.js",
+        "client": "Axiom Analytics",
+        "title": "Real-time analytics dashboard for 50k+ users",
+        "description": "Next.js application with live WebSocket data, role-based access control, and a full REST API.",
+        "metric_value": "4.2s",
+        "metric_label": "Reduced load time to",
+        "gradient": "violet"
+      },
+      {
+        "category": "Webflow",
+        "client": "Clarent Health",
+        "title": "Patient-facing Webflow site with CMS",
+        "description": "Webflow development with custom CMS collections, multi-location filtering, and HIPAA-compliant forms.",
+        "metric_value": "+180%",
+        "metric_label": "Appointment booking lift",
+        "gradient": "emerald"
+      }
+    ]
+  }
+]

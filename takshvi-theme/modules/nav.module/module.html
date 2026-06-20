@@ -1,0 +1,42 @@
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav__inner">
+
+      {# Logo #}
+      <a href="/" class="nav__logo" aria-label="{{ module.logo_text }} — Home">
+        <span class="nav__logo-text">{{ module.logo_text }}</span>
+        <span class="nav__logo-dot" aria-hidden="true"></span>
+      </a>
+
+      {# Desktop Menu #}
+      <ul class="nav__menu" role="list">
+        <li class="nav__item">
+          <a href="/services" class="nav__link">Services</a>
+        </li>
+        <li class="nav__item">
+          <a href="/case-studies" class="nav__link">Work</a>
+        </li>
+        <li class="nav__item">
+          <a href="/process" class="nav__link">Process</a>
+        </li>
+        <li class="nav__item">
+          <a href="/about" class="nav__link">About</a>
+        </li>
+      </ul>
+
+      {# CTA + Hamburger #}
+      <div class="nav__actions">
+        <a href="{{ module.cta_url.url.href }}"
+           class="btn btn--primary nav__cta"
+           {% if module.cta_url.open_in_new_tab %}target="_blank" rel="noopener"{% endif %}>
+          {{ module.cta_label }}
+        </a>
+        <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+          <span class="nav__toggle-line"></span>
+          <span class="nav__toggle-line"></span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</nav>

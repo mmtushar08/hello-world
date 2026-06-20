@@ -1,0 +1,79 @@
+<section class="case-studies" aria-label="Case Studies">
+  <div class="container">
+
+    {# Header #}
+    <div class="case-studies__header">
+      <div class="case-studies__header-left reveal">
+        <p class="section-label">{{ module.section_label }}</p>
+        <h2 class="case-studies__headline">{{ module.headline }}</h2>
+      </div>
+      <div class="case-studies__header-right reveal">
+        <a href="{{ module.view_all_url.url.href }}"
+           class="btn btn--ghost"
+           {% if module.view_all_url.open_in_new_tab %}target="_blank" rel="noopener"{% endif %}>
+          {{ module.view_all_label }}
+          <span class="btn__arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+
+    {# Case Studies Grid #}
+    <div class="case-studies__grid stagger-parent">
+      {% for cs in module.case_studies %}
+      <article class="cs-card stagger-child cs-card--{{ loop.index }} cs-card--{{ cs.gradient }}">
+
+        {# Visual area #}
+        <div class="cs-card__visual">
+          {% if cs.image.src %}
+          <img src="{{ cs.image.src }}"
+               alt="{{ cs.image.alt | default(cs.title) }}"
+               class="cs-card__image"
+               loading="lazy"
+               width="{{ cs.image.width }}"
+               height="{{ cs.image.height }}">
+          {% else %}
+          <div class="cs-card__placeholder" aria-hidden="true">
+            <div class="cs-card__placeholder-inner">
+              <span class="cs-card__client-initial">{{ cs.client | truncate(1, True, '') }}</span>
+            </div>
+          </div>
+          {% endif %}
+
+          {# Category badge over image #}
+          <div class="cs-card__category">{{ cs.category }}</div>
+        </div>
+
+        {# Content #}
+        <div class="cs-card__content">
+          <div class="cs-card__meta">
+            <span class="cs-card__client">{{ cs.client }}</span>
+          </div>
+
+          <h3 class="cs-card__title">{{ cs.title }}</h3>
+          <p class="cs-card__description">{{ cs.description }}</p>
+
+          {# Key metric #}
+          {% if cs.metric_value %}
+          <div class="cs-card__metric">
+            <span class="cs-card__metric-value">{{ cs.metric_value }}</span>
+            <span class="cs-card__metric-label">{{ cs.metric_label }}</span>
+          </div>
+          {% endif %}
+
+          <a href="{{ cs.url.url.href }}"
+             class="cs-card__link"
+             {% if cs.url.open_in_new_tab %}target="_blank" rel="noopener"{% endif %}
+             aria-label="Read case study: {{ cs.title }}">
+            Read case study
+            <svg class="cs-card__arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M2.5 7h9m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+      </article>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>

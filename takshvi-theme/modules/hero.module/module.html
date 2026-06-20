@@ -1,0 +1,103 @@
+<section class="hero" aria-label="Hero">
+  <div class="container">
+    <div class="hero__inner">
+
+      {# Left: Content #}
+      <div class="hero__content">
+        <div class="badge reveal">
+          <span class="badge__dot" aria-hidden="true"></span>
+          {{ module.badge_text }}
+        </div>
+
+        <h1 class="hero__headline reveal">
+          {{ module.headline }}
+        </h1>
+
+        <p class="hero__subtext reveal">{{ module.subtext }}</p>
+
+        <div class="hero__actions reveal">
+          <a href="{{ module.primary_cta_url.url.href }}"
+             class="btn btn--primary btn--lg"
+             {% if module.primary_cta_url.open_in_new_tab %}target="_blank" rel="noopener"{% endif %}>
+            {{ module.primary_cta_label }}
+            <span class="btn__arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="{{ module.secondary_cta_url.url.href }}"
+             class="btn btn--ghost btn--lg"
+             {% if module.secondary_cta_url.open_in_new_tab %}target="_blank" rel="noopener"{% endif %}>
+            {{ module.secondary_cta_label }}
+          </a>
+        </div>
+
+        {# Social proof micro-strip #}
+        <div class="hero__proof reveal">
+          <div class="hero__proof-item">
+            <span class="hero__proof-num">150+</span>
+            <span class="hero__proof-label">Projects shipped</span>
+          </div>
+          <div class="hero__proof-divider" aria-hidden="true"></div>
+          <div class="hero__proof-item">
+            <span class="hero__proof-num">98%</span>
+            <span class="hero__proof-label">Client retention</span>
+          </div>
+          <div class="hero__proof-divider" aria-hidden="true"></div>
+          <div class="hero__proof-item">
+            <span class="hero__proof-num">6+</span>
+            <span class="hero__proof-label">Years of craft</span>
+          </div>
+        </div>
+      </div>
+
+      {# Right: Abstract Visual #}
+      <div class="hero__visual reveal-right" aria-hidden="true">
+        <div class="hero__visual-card">
+          <div class="hvc__header">
+            <span class="hvc__dot hvc__dot--red"></span>
+            <span class="hvc__dot hvc__dot--yellow"></span>
+            <span class="hvc__dot hvc__dot--green"></span>
+            <span class="hvc__filename">performance.js</span>
+          </div>
+          <div class="hvc__body">
+            <pre class="hvc__code"><span class="hvc__kw">const</span> <span class="hvc__var">score</span> = <span class="hvc__fn">audit</span>({
+  <span class="hvc__prop">performance</span>: <span class="hvc__num">99</span>,
+  <span class="hvc__prop">accessibility</span>: <span class="hvc__num">100</span>,
+  <span class="hvc__prop">seo</span>: <span class="hvc__num">98</span>,
+  <span class="hvc__prop">bestPractices</span>: <span class="hvc__num">100</span>,
+});</pre>
+          </div>
+          <div class="hvc__metrics">
+            <div class="hvc__metric">
+              <span class="hvc__metric-label">Lighthouse</span>
+              <span class="hvc__metric-bar">
+                <span class="hvc__metric-fill" style="width:99%"></span>
+              </span>
+              <span class="hvc__metric-val">99</span>
+            </div>
+            <div class="hvc__metric">
+              <span class="hvc__metric-label">Core Web Vitals</span>
+              <span class="hvc__metric-bar">
+                <span class="hvc__metric-fill" style="width:100%"></span>
+              </span>
+              <span class="hvc__metric-val">Pass</span>
+            </div>
+            <div class="hvc__metric">
+              <span class="hvc__metric-label">Page Speed</span>
+              <span class="hvc__metric-bar">
+                <span class="hvc__metric-fill" style="width:96%"></span>
+              </span>
+              <span class="hvc__metric-val">0.8s</span>
+            </div>
+          </div>
+        </div>
+        {# Decorative dots #}
+        <div class="hero__visual-bg" aria-hidden="true"></div>
+      </div>
+
+    </div>
+  </div>
+
+  {# Subtle scroll indicator #}
+  <div class="hero__scroll-hint" aria-hidden="true">
+    <div class="hero__scroll-line"></div>
+  </div>
+</section>

@@ -1,0 +1,53 @@
+{% extends "../layouts/base.html" %}
+
+{% block body %}
+{% module "enterprise_service_page" path="@theme/modules/service-page.module",
+  platform_badge="Enterprise Application Development",
+  hero_headline="Custom applications<br>your enterprise<br>can scale with.",
+  hero_subtext="We design and engineer B2B web applications, customer portals, internal tools, and data platforms for companies that have outgrown off-the-shelf software — built with the reliability and documentation standards enterprise teams require.",
+  hero_cta_label="Discuss your project",
+  hero_cta_url={ "url": { "href": "/contact" } },
+
+  pain_heading="When off-the-shelf breaks down",
+  pain_points=[
+    { "text": "Your operations team is running business-critical workflows on spreadsheets and email because no SaaS tool fits your exact process." },
+    { "text": "You bought a platform that technically works but requires $200k/year in customisation from a certified partner to do what you actually need." },
+    { "text": "Your customer-facing portal is a legacy PHP application that the original developer hasn't touched in 4 years — it works until it doesn't." },
+    { "text": "You need a multi-tenant application for your customers but your engineering team is fully focused on core product." },
+    { "text": "Data from 5 different systems lives in silos — no unified view, no reporting, no automation between them." }
+  ],
+
+  deliverables_heading="What we deliver",
+  deliverables=[
+    { "title": "B2B Customer Portals", "description": "Self-service portals for your customers — order management, support tickets, document access, usage dashboards, and account settings. SSO-enabled, role-based, and branded." },
+    { "title": "Internal Operations Tools", "description": "Custom internal applications that replace spreadsheet workflows. Approval flows, data entry interfaces, reporting dashboards, and automations built around your team's actual process." },
+    { "title": "Data Platforms & Dashboards", "description": "Unified data views pulling from multiple sources — CRM, billing, product analytics, support — with role-based access, filtering, and export. Built on React + PostgreSQL or BigQuery." },
+    { "title": "API Design & Development", "description": "RESTful and GraphQL APIs built with Node.js or Python. OpenAPI spec, rate limiting, versioning, authentication (JWT, OAuth2), and full documentation." },
+    { "title": "Legacy Application Modernisation", "description": "Incremental migration of legacy PHP, .NET, or Java applications to modern Node.js + React architectures. Strangler fig pattern. No big-bang rewrites." },
+    { "title": "System Integrations & Middleware", "description": "Connecting your application ecosystem — CRM, ERP, billing, data warehouse, and third-party APIs — via event-driven middleware or synchronous API bridges." }
+  ],
+
+  tech_items="Node.js, TypeScript, Next.js, React, PostgreSQL, Supabase, Redis, Docker, AWS / GCP, Terraform, Prisma, tRPC, Auth0, Stripe, REST, GraphQL, OpenAPI, Playwright",
+
+  process_heading="How enterprise projects work",
+  process_steps=[
+    { "title": "Requirements & Scoping", "description": "Structured discovery workshop with your stakeholders. Process mapping, user journey definition, data model design, and integration audit. Delivered as a technical specification." },
+    { "title": "Architecture Design", "description": "System design document covering data model, API contracts, authentication strategy, infrastructure architecture, and rollout approach. Reviewed and signed off before build begins." },
+    { "title": "Phased Build & Testing", "description": "Phased delivery in 2-week sprints. Each phase has defined acceptance criteria. CI/CD pipeline from day one. E2E and integration testing throughout." },
+    { "title": "Deployment & Handover", "description": "Infrastructure provisioning (AWS / GCP / Azure), load testing, security review, UAT support, and full technical documentation. Post-launch SLA available." }
+  ],
+
+  faq_heading="Common questions",
+  faqs=[
+    { "question": "How do you handle security and compliance requirements?", "answer": "<p>We implement security-first practices: input validation, parameterised queries, OWASP top-10 mitigations, proper secret management (AWS Secrets Manager / Vault), and dependency scanning in CI. For regulated industries (healthcare, finance), we layer in HIPAA or SOC2-relevant controls and can produce security documentation for your compliance team.</p>" },
+    { "question": "What's the minimum project size for enterprise application work?", "answer": "<p>Enterprise application engagements start at $75,000. Smaller custom tool builds (internal tools with limited scope) can be scoped from $30,000. We always recommend starting with a paid discovery phase ($5,000–$10,000) for complex projects before committing to full build scope.</p>" },
+    { "question": "Do you build mobile applications too?", "answer": "<p>Our primary focus is web applications. For mobile, we build Progressive Web Apps (PWAs) and React Native applications for companies that need cross-platform mobile functionality. We don't do native iOS or Android-only development.</p>" },
+    { "question": "Can you work with our existing internal development team?", "answer": "<p>Yes. We work as an embedded team extension regularly. We follow your team's coding standards, participate in your sprint ceremonies, use your Git workflow, and write handoff-quality code from the start.</p>" },
+    { "question": "How do you ensure the application can be maintained after handoff?", "answer": "<p>Every enterprise project includes: full technical documentation, an architecture decision record (ADR), end-to-end test suite, seed data and local development setup, and a 30-day post-launch support period. We also offer ongoing maintenance retainers.</p>" },
+    { "question": "What cloud infrastructure do you use?", "answer": "<p>We work primarily with AWS and GCP. We provision infrastructure using Terraform (IaC), set up CI/CD pipelines (GitHub Actions), and use managed services where possible (RDS, Cloud SQL, S3, Cloud Storage) to minimise operational overhead for your team.</p>" }
+  ],
+
+  cta_headline="Have an application that<br>needs to be built right?",
+  cta_subtext="We start every engagement with a paid discovery phase so there are no surprises in scope or cost."
+%}
+{% endblock %}

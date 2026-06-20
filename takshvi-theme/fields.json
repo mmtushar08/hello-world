@@ -1,0 +1,64 @@
+[
+  {
+    "id": "primary_color",
+    "name": "primary_color",
+    "label": "Primary Accent Color",
+    "type": "color",
+    "default": {
+      "color": "#1d4ed8",
+      "opacity": 100
+    }
+  },
+  {
+    "id": "text_color",
+    "name": "text_color",
+    "label": "Primary Text Color",
+    "type": "color",
+    "default": {
+      "color": "#0d0d0d",
+      "opacity": 100
+    }
+  },
+  {
+    "id": "background_color",
+    "name": "background_color",
+    "label": "Background Color",
+    "type": "color",
+    "default": {
+      "color": "#ffffff",
+      "opacity": 100
+    }
+  },
+  {
+    "id": "heading_font",
+    "name": "heading_font",
+    "label": "Heading Font",
+    "type": "font",
+    "default": {
+      "font": "Inter",
+      "font_set": "GOOGLE",
+      "size": 16,
+      "size_unit": "px",
+      "color": "#0d0d0d",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    }
+  },
+  {
+    "id": "body_font",
+    "name": "body_font",
+    "label": "Body Font",
+    "type": "font",
+    "default": {
+      "font": "Inter",
+      "font_set": "GOOGLE",
+      "size": 16,
+      "size_unit": "px",
+      "color": "#6b7280",
+      "bold": false,
+      "italic": false,
+      "underline": false
+    }
+  }
+]

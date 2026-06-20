@@ -1,0 +1,52 @@
+{% extends "../layouts/base.html" %}
+
+{% block body %}
+{% module "webflow_service_page" path="@theme/modules/service-page.module",
+  platform_badge="Webflow Development",
+  hero_headline="Webflow builds that<br>move as fast as<br>your team does.",
+  hero_subtext="We build production-grade Webflow sites for B2B SaaS companies and fast-growing brands — custom CMS architecture, API integrations, and interactions that don't sacrifice load speed.",
+  hero_cta_label="Start your Webflow project",
+  hero_cta_url={ "url": { "href": "/contact" } },
+
+  pain_heading="The Webflow problems we solve",
+  pain_points=[
+    { "text": "Your current Webflow site was designed beautifully but the CMS structure makes it impossible for the marketing team to scale." },
+    { "text": "Interactions and animations are killing page speed — Lighthouse scores in the 50s, Core Web Vitals failing." },
+    { "text": "You need Webflow to talk to your HubSpot CRM, Salesforce, or custom backend — and nobody has figured out how." },
+    { "text": "Your designer handed off a Webflow file but it wasn't built to be maintained — breakpoints are broken, components aren't reused." },
+    { "text": "You're launching a new product or brand and need a high-quality Webflow site in 4–6 weeks, not 6 months." }
+  ],
+
+  deliverables_heading="What we deliver",
+  deliverables=[
+    { "title": "Custom Webflow CMS Architecture", "description": "Structured CMS collections built for scale. Blog, case studies, team pages, changelog, pricing tables — all manageable without touching the designer." },
+    { "title": "Webflow + HubSpot / CRM Integration", "description": "Two-way sync between Webflow forms and HubSpot CRM, Salesforce, or your custom backend via Make, Zapier, or direct API. No data gaps." },
+    { "title": "Performance-First Builds", "description": "Lazy-loaded images, deferred Webflow.js, optimised Lottie and interaction triggers. We routinely deliver Lighthouse scores of 95+ on Webflow." },
+    { "title": "Webflow Interactions & Animations", "description": "Subtle, purposeful animations built on Webflow Interactions and GSAP where needed — not gratuitous scroll effects that hurt conversions." },
+    { "title": "Platform Migrations to Webflow", "description": "SEO-safe migrations from WordPress, Squarespace, Framer, or HubSpot CMS. Full redirect architecture and post-launch validation." },
+    { "title": "Webflow Enterprise Setup", "description": "Multi-site workspace configuration, editor roles, page locking, brand asset libraries, and team training for Enterprise plan clients." }
+  ],
+
+  tech_items="Webflow Designer, Webflow CMS, Webflow Logic, Webflow Ecommerce, JavaScript, GSAP, Finsweet Attributes, Make (Integromat), HubSpot API, REST APIs, Lottie",
+
+  process_heading="How a Webflow project works",
+  process_steps=[
+    { "title": "Scope & Architecture", "description": "We review your sitemap, content needs, and integrations. We design the CMS schema and component library before touching the Designer." },
+    { "title": "Component Build", "description": "We build the design system in Webflow first — typography, colours, buttons, cards — then assemble pages from reusable components." },
+    { "title": "CMS + Integrations", "description": "CMS collections, dynamic pages, form connections, and API integrations wired up and tested in staging." },
+    { "title": "Launch & Editor Training", "description": "Fully QA'd launch with redirect validation, CWV audit, and a recorded editor training session so your team can hit the ground running." }
+  ],
+
+  faq_heading="Common questions",
+  faqs=[
+    { "question": "Is Webflow right for our B2B SaaS company?", "answer": "<p>Yes — Webflow is now the default choice for Series A–C SaaS companies that need editorial speed, visual quality, and engineering flexibility. It's ideal if your marketing team needs to update the site weekly without opening a Jira ticket.</p>" },
+    { "question": "How long does a Webflow build take?", "answer": "<p>A standard Webflow marketing site (10–25 pages, full CMS, integrations) takes 5–8 weeks from kickoff to launch. Larger builds with e-commerce or complex logic take 8–14 weeks.</p>" },
+    { "question": "Can Webflow handle our enterprise content requirements?", "answer": "<p>Webflow CMS handles up to 10,000 items per collection and supports complex relationships. For larger data sets or highly dynamic content, we architect hybrid solutions using Webflow as the presentation layer with an API-driven backend.</p>" },
+    { "question": "How do you achieve high Lighthouse scores on Webflow?", "answer": "<p>We defer third-party scripts, lazy-load all images, optimise Lottie files, remove unused Webflow.js modules, and implement proper font loading. We audit every build before launch and target 90+ across all Lighthouse categories.</p>" },
+    { "question": "What does a Webflow project cost?", "answer": "<p>A production Webflow site for a B2B SaaS company starts at $15,000 for a focused marketing site. Full-scale builds with CMS, integrations, and migration run $30,000–$80,000. Ongoing retainers (CMS support, A/B testing, new pages) start at $3,500/month.</p>" }
+  ],
+
+  cta_headline="Ready for a Webflow site<br>your team can actually own?",
+  cta_subtext="Share your brief. We'll tell you the right architecture and timeline within 48 hours."
+%}
+{% endblock %}

@@ -1,0 +1,57 @@
+[
+  {
+    "id": "badge_text",
+    "name": "badge_text",
+    "label": "Badge Text",
+    "type": "text",
+    "default": "HubSpot Diamond Partner"
+  },
+  {
+    "id": "headline",
+    "name": "headline",
+    "label": "Headline (HTML allowed)",
+    "type": "richtext",
+    "default": "We build digital<br>experiences that<br>convert."
+  },
+  {
+    "id": "subtext",
+    "name": "subtext",
+    "label": "Subtext",
+    "type": "textarea",
+    "default": "Expert HubSpot CMS, WordPress, Webflow, and React development for B2B companies that demand precision."
+  },
+  {
+    "id": "primary_cta_label",
+    "name": "primary_cta_label",
+    "label": "Primary CTA Label",
+    "type": "text",
+    "default": "View our work"
+  },
+  {
+    "id": "primary_cta_url",
+    "name": "primary_cta_url",
+    "label": "Primary CTA URL",
+    "type": "link",
+    "default": {
+      "url": { "href": "/case-studies", "type": "EXTERNAL" },
+      "open_in_new_tab": false
+    }
+  },
+  {
+    "id": "secondary_cta_label",
+    "name": "secondary_cta_label",
+    "label": "Secondary CTA Label",
+    "type": "text",
+    "default": "Talk to us"
+  },
+  {
+    "id": "secondary_cta_url",
+    "name": "secondary_cta_url",
+    "label": "Secondary CTA URL",
+    "type": "link",
+    "default": {
+      "url": { "href": "/contact", "type": "EXTERNAL" },
+      "open_in_new_tab": false
+    }
+  }
+]
