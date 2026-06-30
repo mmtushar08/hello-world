@@ -1,0 +1,15 @@
+# Copy this file to hubspot.config.yml and fill in your own values.
+# hubspot.config.yml is gitignored — never commit your real Personal Access Key.
+#
+# Get your Personal Access Key at:
+# https://app.hubspot.com/personal-access-key/<YOUR_PORTAL_ID>
+#
+# Or skip this file entirely and run `hs init` from the CLI —
+# it will create hubspot.config.yml for you interactively.
+
+defaultPortal: takshvi
+portals:
+  - name: takshvi
+    portalId: YOUR_PORTAL_ID
+    authType: personalaccesskey
+    personalAccessKey: YOUR_PERSONAL_ACCESS_KEY

@@ -56,6 +56,23 @@ ul{list-style:none}
 .nav__link:hover,.nav__link.active{color:var(--color-text-primary);background:var(--color-bg-off)}
 .nav__actions{display:flex;align-items:center;gap:.75rem;flex-shrink:0}
 .nav__cta{padding:.5rem 1.1rem;font-size:var(--text-sm)}
+.nav__toggle{display:none;flex-direction:column;justify-content:center;gap:5px;width:36px;height:36px;background:none;border:none;cursor:pointer;padding:0}
+.nav__toggle-line{display:block;width:20px;height:2px;background:var(--color-text-primary);border-radius:1px;transition:transform var(--t-fast),opacity var(--t-fast)}
+.nav__toggle[aria-expanded="true"] .nav__toggle-line:first-child{transform:translateY(3.5px) rotate(45deg)}
+.nav__toggle[aria-expanded="true"] .nav__toggle-line:last-child{transform:translateY(-3.5px) rotate(-45deg)}
+
+/* Mobile nav overlay */
+@media(max-width:640px){
+  .nav__toggle{display:flex}
+  .nav__cta.nav__cta--desktop{display:none}
+  .nav__menu{position:fixed;top:0;right:0;bottom:0;width:min(320px,80vw);height:100svh;flex-direction:column;align-items:stretch;gap:0;margin:0;padding:5.5rem 1.5rem 2rem;background:#fff;box-shadow:-8px 0 32px rgba(0,0,0,.12);transform:translateX(100%);transition:transform var(--t-base);overflow-y:auto}
+  .nav__menu.is-open{transform:translateX(0)}
+  .nav__link{padding:.9rem 0;border-bottom:1px solid var(--color-border-light);border-radius:0;font-size:var(--text-base)}
+  .nav__menu .nav__cta--mobile{display:block;margin-top:1.5rem;text-align:center}
+  .nav__backdrop{display:block;position:fixed;inset:0;background:rgba(13,13,13,.3);opacity:0;pointer-events:none;transition:opacity var(--t-base);z-index:99}
+  .nav__backdrop.is-open{opacity:1;pointer-events:auto}
+}
+.nav__backdrop{display:none}
 
 /* SP HERO */
 .sp-hero{position:relative;padding-top:9rem;padding-bottom:5rem;background:var(--color-bg);overflow:hidden}
@@ -158,6 +175,5 @@ ul{list-style:none}
   .sp-hero__actions{flex-direction:column}
   .sp-hero__actions .btn{justify-content:center}
   .sp-tech__inner{flex-direction:column;align-items:flex-start;gap:1rem}
-  .nav__menu{display:none}
   .footer__bottom{flex-direction:column;align-items:flex-start}
 }
